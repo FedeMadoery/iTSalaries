@@ -28,7 +28,7 @@ export const SignedOut = createStackNavigator({
             headerStyle
         }
     }
-});
+}, {initialRouteName: "SignIn" });
 
 export const SignedIn = createBottomTabNavigator(
     {

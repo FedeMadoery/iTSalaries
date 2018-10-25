@@ -7,11 +7,17 @@ export default ({ navigation }) => (
     <View style={{ paddingVertical: 20 }}>
         <Card>
             <FormLabel>Email</FormLabel>
-            <FormInput placeholder="Email address..." />
+            <FormInput underlineColorAndroid="grey"
+                       inputStyle={{width: '100%', marginHorizontal: 10}}
+                       placeholder="Email address..." />
             <FormLabel>Password</FormLabel>
-            <FormInput secureTextEntry placeholder="Password..." />
+            <FormInput underlineColorAndroid="grey"
+                       inputStyle={{width: '100%', marginHorizontal: 10}}
+                       secureTextEntry placeholder="Password..." />
             <FormLabel>Confirm Password</FormLabel>
-            <FormInput secureTextEntry placeholder="Confirm Password..." />
+            <FormInput underlineColorAndroid="grey"
+                       inputStyle={{width: '100%', marginHorizontal: 10}}
+                       secureTextEntry placeholder="Confirm Password..." />
 
             <Button
                 buttonStyle={{ marginTop: 20 }}
@@ -20,13 +26,6 @@ export default ({ navigation }) => (
                 onPress={() => {
                     onSignIn().then(() => navigation.navigate("SignedIn"));
                 }}
-            />
-            <Button
-                buttonStyle={{ marginTop: 20 }}
-                backgroundColor="transparent"
-                textStyle={{ color: "#bcbec1" }}
-                title="Sign In"
-                onPress={() => navigation.navigate("SignIn")}
             />
         </Card>
     </View>
